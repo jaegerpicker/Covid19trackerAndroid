@@ -11,7 +11,6 @@ data class Information(
     @PrimaryKey(autoGenerate = true) val priKey: Int = 0,
     @ColumnInfo(name = "id") val id: String,
     @ColumnInfo(name = "displayName") val displayName: String,
-    @ColumnInfo(name = "areaIds") val areas: ArrayList<Areas>,
     @ColumnInfo(name = "totalConfirmed") val totalConfirmed: Int,
     @ColumnInfo(name = "totalDeaths") val totalDeaths: Int,
     @ColumnInfo(name = "totalRecovered") val totalRecovered: Int,
@@ -28,7 +27,6 @@ data class Information(
             return Information(
                 id = area.id,
                 displayName = area.displayName,
-                areas = area.areas,
                 totalConfirmed = area.totalConfirmed,
                 totalDeaths = area.totalDeaths,
                 totalRecovered = area.totalRecovered,
