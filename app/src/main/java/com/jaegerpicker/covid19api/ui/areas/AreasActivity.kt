@@ -23,13 +23,13 @@ class AreasActivity : BindingActivity<ActivityAreasBinding>() {
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.men_search, menu)
+        menuInflater.inflate(R.menu.menu_area, menu)
         return super.onCreateOptionsMenu(menu)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
-            R.id.area -> {
+            R.id.search_recycler_view -> {
                 startActivity(Intent(this, InformationActivity::class.java))
                 true
             }
